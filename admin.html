@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Admin panel — Alo</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#6A4FB6">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236A4FB6'/><circle cx='32' cy='32' r='12' fill='%23F7CDE1'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a href="index.html" class="brand"><span class="brand-bn">আলো</span><span class="brand-en">Admin</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#users">Users</a></li>
+        <li><a href="#by-program">By program</a></li>
+        <li><a href="index.html">View site</a></li>
+        <li><a href="#" id="signout" class="btn btn-outline btn-sm">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="app wrap">
+    <div class="app-head">
+      <div>
+        <h1 style="font-size:clamp(1.8rem,4vw,2.4rem)">Admin panel</h1>
+        <p class="muted" style="margin:0">See who is interested in what, and reply to questions.</p>
+      </div>
+      <button class="btn btn-outline" id="export">Download users as CSV</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="st-users">–</b><span class="small muted">Registered users</span></div>
+      <div class="stat"><b id="st-interests">–</b><span class="small muted">Programs saved</span></div>
+      <div class="stat"><b id="st-unread">–</b><span class="small muted">Unread messages</span></div>
+      <div class="stat"><b id="st-new">–</b><span class="small muted">Joined in last 7 days</span></div>
+    </div>
+
+    <div class="admin-grid">
+      <section class="panel" id="users" aria-labelledby="users-title">
+        <h2 id="users-title">Users</h2>
+        <div class="field-row">
+          <div class="field"><label for="u-search">Search name, phone, district</label><input id="u-search" type="search"></div>
+          <div class="field"><label for="u-program">Interested in</label><select id="u-program"><option value="">Any program</option></select></div>
+        </div>
+        <label class="check" style="margin-bottom:1rem"><input type="checkbox" id="u-unread"> Only users waiting for a reply</label>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>District</th><th>GPA</th><th>Saved</th><th>Joined</th></tr></thead>
+            <tbody id="user-rows"><tr><td colspan="5" class="muted">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="detail" aria-labelledby="detail-title">
+        <h2 id="detail-title">Select a user</h2>
+        <p class="muted" id="detail-empty">Choose someone from the list to see her details, the programs she saved, and to chat with her.</p>
+        <div id="detail-body" hidden>
+          <dl class="detail-grid" id="detail-info"></dl>
+          <h3>Saved programs</h3>
+          <div class="table-wrap"><table><thead><tr><th>Program</th><th>Status</th></tr></thead><tbody id="detail-interests"></tbody></table></div>
+          <h3 style="margin-top:1.25rem">Chat</h3>
+          <div class="chat">
+            <div class="chat-log" id="chat-log" aria-live="polite"></div>
+            <form class="chat-form" id="chat-form">
+              <label for="chat-input" class="sr-only">Reply</label>
+              <input id="chat-input" autocomplete="off" maxlength="2000" placeholder="Write your advice">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-wide" id="by-program" aria-labelledby="bp-title" style="grid-column:1/-1">
+        <h2 id="bp-title">Interest by program</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Program</th><th>Type</th><th>Users</th><th>Names</th></tr></thead>
+            <tbody id="program-rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/programs.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

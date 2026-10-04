@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alo — Your way forward after HSC</title>
+  <meta name="description" content="Alo helps young women in Bangladesh find funded university places, scholarships, diplomas and skills training after HSC.">
+  <meta name="theme-color" content="#6A4FB6">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236A4FB6'/><circle cx='32' cy='32' r='12' fill='%23F7CDE1'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a href="index.html" class="brand"><span class="brand-bn">আলো</span><span class="brand-en">Alo</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#explore">Find programs</a></li>
+        <li><a href="#earning">Earn with skills</a></li>
+        <li><a href="#families">For families</a></li>
+        <li><a href="#safety">Get help</a></li>
+        <li><a href="auth.html" class="btn btn-primary btn-sm" data-account-link>Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero with pathway finder -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-bn">এইচএসসির পর, তোমার পথ</p>
+          <h1>You passed HSC. There are more ways forward than you think.</h1>
+          <p class="hero-lede">Funded university places, scholarships, diplomas and free skills training, in one place. Answer five questions and see what you qualify for.</p>
+          <div class="hero-actions">
+            <a href="#explore" class="btn btn-outline">Browse all programs</a>
+            <a href="auth.html" class="btn btn-soft">Talk to a counsellor</a>
+          </div>
+        </div>
+
+        <form class="finder" id="finder" novalidate>
+          <h2>Find my options</h2>
+          <p>Takes one minute. Nothing is saved unless you sign in.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-gpa">HSC GPA</label>
+              <input id="f-gpa" type="number" min="1" max="5" step="0.01" placeholder="e.g. 4.25" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="f-group">HSC group</label>
+              <select id="f-group">
+                <option value="science">Science</option>
+                <option value="humanities">Humanities</option>
+                <option value="business">Business studies</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <span id="q-income" style="display:block;font-weight:600;font-size:.95rem;margin-bottom:.35rem">Do you need to earn money soon?</span>
+            <div class="seg" role="radiogroup" aria-labelledby="q-income">
+              <input type="radio" name="income" id="inc-yes" value="yes"><label for="inc-yes">Yes</label>
+              <input type="radio" name="income" id="inc-no" value="no" checked><label for="inc-no">Not yet</label>
+            </div>
+          </div>
+          <div class="field">
+            <span id="q-device" style="display:block;font-weight:600;font-size:.95rem;margin-bottom:.35rem">Which device can you use?</span>
+            <div class="seg" role="radiogroup" aria-labelledby="q-device">
+              <input type="radio" name="device" id="dev-phone" value="phone" checked><label for="dev-phone">Phone only</label>
+              <input type="radio" name="device" id="dev-laptop" value="laptop"><label for="dev-laptop">Computer too</label>
+            </div>
+          </div>
+          <div class="field">
+            <span id="q-move" style="display:block;font-weight:600;font-size:.95rem;margin-bottom:.35rem">Can you move to another city to study?</span>
+            <div class="seg" role="radiogroup" aria-labelledby="q-move">
+              <input type="radio" name="move" id="move-yes" value="yes"><label for="move-yes">Yes</label>
+              <input type="radio" name="move" id="move-no" value="no" checked><label for="move-no">I need to stay close</label>
+            </div>
+          </div>
+          <button type="submit" class="btn">Show my options</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- The real problem -->
+    <section class="section section-tint" aria-labelledby="seats-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="seats-title">Seats exist. Most girls just never hear about them.</h2>
+          <p class="muted">In 2025, only about 1 in 13 HSC passers could get a public university or medical college seat. But Bangladesh has more university places than HSC passers, most of them in affordable colleges and open learning.</p>
+        </div>
+        <div class="seats" role="img" aria-label="University seats: over 13 lakh. HSC passers: about 7.2 lakh. Public university and medical seats: about 1 in 13 passers.">
+          <div class="bar-row"><span class="bar-label">All university seats</span><div class="bar bar-seats">13 lakh+</div></div>
+          <div class="bar-row"><span class="bar-label">HSC passers, 2025</span><div class="bar bar-pass">7.2 lakh</div></div>
+          <div class="bar-row"><span class="bar-label">Public university and medical</span><div class="bar bar-public">1 in 13 passers</div></div>
+        </div>
+        <p class="small muted" style="margin-top:1rem">Source: University Grants Commission figures reported by Jago News, October 2025.</p>
+      </div>
+    </section>
+
+    <!-- Explorer -->
+    <section class="section" id="explore" aria-labelledby="explore-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="explore-title">Programs you can apply for</h2>
+          <p class="muted" id="explore-sub">Every program links to its official source. Save the ones you like and a counsellor can help you apply.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Program type" id="tabs"></div>
+
+        <div class="filters">
+          <div class="search">
+            <label for="search" class="sr-only">Search programs</label>
+            <input id="search" type="search" placeholder="Search, e.g. nursing, design">
+          </div>
+          <label class="check"><input type="checkbox" id="flt-free"> Free or pays me</label>
+          <label class="check"><input type="checkbox" id="flt-phone"> Phone is enough</label>
+          <label class="check"><input type="checkbox" id="flt-earn"> Earn within a year</label>
+          <button type="button" class="btn btn-outline btn-sm" id="flt-reset" hidden>Clear my finder results</button>
+        </div>
+
+        <div class="program-list" id="program-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Earning route -->
+    <section class="section section-tint" id="earning" aria-labelledby="earning-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="earning-title">From a new skill to your first income</h2>
+          <p class="muted">Most beginners need a few months before their first paying client. This is the route that works.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Learn</h3><p>Pick a free or low-cost course that fits your device and time.</p></li>
+          <li><h3>Practise</h3><p>Make 5 to 10 sample pieces you can show people.</p></li>
+          <li><h3>Earn locally</h3><p>Start with shops, Facebook pages and people you know.</p></li>
+          <li><h3>Grow</h3><p>Move to freelancing sites or a full-time job once you have reviews.</p></li>
+        </ol>
+        <div class="split" style="margin-top:2.5rem">
+          <div>
+            <h3>Before you start freelancing</h3>
+            <ul class="ticks">
+              <li>Fiverr and Upwork accept members aged 18 and over.</li>
+              <li>You need your own NID and a bank or mobile wallet account to receive payments.</li>
+              <li>Payoneer or a bank transfer is the usual way to receive money from abroad.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Warning signs of a scam</h3>
+            <ul class="ticks">
+              <li>A course that promises a fixed dollar income.</li>
+              <li>Anyone asking for money to give you a job.</li>
+              <li>Programs where you earn by bringing in other people.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Families -->
+    <section class="section" id="families" aria-labelledby="families-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="families-title">For parents and guardians</h2>
+          <p>Continuing to study does not have to cost a lot or mean moving far away. Many programs on Alo are free, pay a stipend, or run in your own district.</p>
+          <p>A daughter who finishes a degree, diploma or certified course can earn and support the family for years to come.</p>
+        </div>
+        <div>
+          <h3>What families often ask</h3>
+          <ul class="ticks">
+            <li><strong>Is it affordable?</strong> Filter by "Free or pays me" to see options with no tuition.</li>
+            <li><strong>Is it safe?</strong> Filter out programs that need moving, or choose women-only training batches.</li>
+            <li><strong>Will it lead to a job?</strong> Each program shows where it can lead.</li>
+          </ul>
+          <a href="auth.html" class="btn btn-primary" style="margin-top:1rem">Ask a counsellor together</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section section-pink" id="safety" aria-labelledby="safety-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="safety-title">If you or someone you know is in danger</h2>
+          <p>These numbers are free and open day and night. Calls about forced or child marriage are taken seriously.</p>
+        </div>
+        <div class="helplines">
+          <div class="helpline"><a class="num" href="tel:999">999</a><p class="small" style="margin:0">National emergency: police, fire, ambulance</p></div>
+          <div class="helpline"><a class="num" href="tel:109">109</a><p class="small" style="margin:0">Violence against women and children, child marriage, legal and counselling support</p></div>
+          <div class="helpline"><a class="num" href="tel:1098">1098</a><p class="small" style="margin:0">Child Helpline: abuse of anyone under 18</p></div>
+          <div class="helpline"><a class="num long" href="tel:01320002001">01320-002001</a><p class="small" style="margin:0">Police HQ hotline for harassment and violence against women. Also 01320-002002</p></div>
+        </div>
+        <p class="small" style="margin-top:1.25rem">Need to leave this site quickly? Press the "Leave this site" button or Shift + Esc. To hide your visit, also clear your browser history or use a private window.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p><span class="brand-bn">আলো</span></p>
+        <p>Alo helps young women in Bangladesh find funded education, scholarships and skills for financial independence.</p>
+        <p class="small">Information is checked against official sources. Always confirm dates and rules in the official circular before applying.</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#explore">Find programs</a></li>
+          <li><a href="#earning">Earn with skills</a></li>
+          <li><a href="#families">For families</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="auth.html">Sign in</a></li>
+          <li><a href="#safety">Get help</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="quick-exit" data-quick-exit>Leave this site</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/programs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

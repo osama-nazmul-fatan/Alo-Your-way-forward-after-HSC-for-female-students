@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sign in — Alo</title>
+  <meta name="theme-color" content="#6A4FB6">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236A4FB6'/><circle cx='32' cy='32' r='12' fill='%23F7CDE1'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a href="index.html" class="brand"><span class="brand-bn">আলো</span><span class="brand-en">Alo</span></a>
+      <a href="index.html" class="btn btn-outline btn-sm">Back to programs</a>
+    </nav>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <div id="setup-notice" class="notice" hidden>
+        <strong>Database not connected yet.</strong> Add your Supabase details to <code>js/config.js</code> to turn on accounts. See README.md.
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Account" id="auth-tabs">
+        <button class="tab" role="tab" data-mode="signin" aria-selected="true">Sign in</button>
+        <button class="tab" role="tab" data-mode="signup" aria-selected="false">Create account</button>
+      </div>
+
+      <div class="form-msg" id="msg" role="alert"></div>
+
+      <!-- Sign in -->
+      <form id="signin-form" novalidate>
+        <h1 style="font-size:1.8rem">Welcome back</h1>
+        <div class="field"><label for="si-email">Email</label><input id="si-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="si-pass">Password</label><input id="si-pass" type="password" autocomplete="current-password" required></div>
+        <button class="btn btn-primary" style="width:100%" type="submit">Sign in</button>
+        <p class="small" style="margin-top:1rem"><a href="#" id="forgot">Forgot your password?</a></p>
+      </form>
+
+      <!-- Sign up -->
+      <form id="signup-form" hidden novalidate>
+        <h1 style="font-size:1.8rem">Create your account</h1>
+        <p class="muted small">Save programs and chat with a counsellor for free.</p>
+        <div class="field"><label for="su-name">Full name</label><input id="su-name" autocomplete="name" required></div>
+        <div class="field"><label for="su-email">Email</label><input id="su-email" type="email" autocomplete="email" required></div>
+        <div class="field-row">
+          <div class="field"><label for="su-phone">Mobile number</label><input id="su-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="01XXXXXXXXX"></div>
+          <div class="field"><label for="su-district">District</label><input id="su-district" placeholder="e.g. Sirajganj"></div>
+        </div>
+        <div class="field"><label for="su-pass">Password</label><input id="su-pass" type="password" autocomplete="new-password" minlength="8" required><span class="small muted">At least 8 characters</span></div>
+        <button class="btn btn-primary" style="width:100%" type="submit">Create account</button>
+      </form>
+
+      <!-- Set new password (after reset link) -->
+      <form id="reset-form" hidden novalidate>
+        <h1 style="font-size:1.8rem">Set a new password</h1>
+        <div class="field"><label for="rp-pass">New password</label><input id="rp-pass" type="password" autocomplete="new-password" minlength="8" required></div>
+        <button class="btn btn-primary" style="width:100%" type="submit">Save new password</button>
+      </form>
+    </div>
+  </main>
+
+  <button class="quick-exit" data-quick-exit>Leave this site</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
