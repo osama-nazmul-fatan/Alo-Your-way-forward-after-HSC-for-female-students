@@ -1,4 +1,4 @@
-** Alo: Funded education, scholarships and skills training for young women in Bangladesh after HSC.**
+Alo: Funded education, scholarships and skills training for young women in Bangladesh after HSC.
 
 Alo is a  web platform that helps young women continue their education and become financially independent after the Higher Secondary Certificate (HSC). It brings funded university places, government and foreign scholarships, diplomas and free skills training into one place, matches each user to the programs she qualifies for and connects her with a counsellor who helps her apply.
 
